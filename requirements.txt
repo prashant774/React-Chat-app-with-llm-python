@@ -1,0 +1,5 @@
+torch
+transformers
+pdfminer.six
+spacy
+vadersentiment
