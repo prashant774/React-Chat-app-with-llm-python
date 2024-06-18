@@ -27,52 +27,84 @@ This project is a chat application that leverages a Large Language Model (LLM) f
 
 1. **Clone the repository:**
 
+    ```sh
    git clone https://github.com/prashant774/React-Chat-app-with-llm-python.git
+
    cd React-Chat-app-with-llm-python
+   ```
 
 2. **Backend Setup:**
-   Navigate to the backend directory:
-   cd chatappBackend
-   Install dependencies:
-   npm install
 
+   Navigate to the backend directory:
+
+   cd chatappBackend
+
+   Install dependencies:
+    ```sh
+   npm install
+    ```
    Create a `.env` file in the chatappBackend directory with the following content:
 
+    ```sh
    DB_USER=postgres
    DB_PASSWORD=123456
    DB_HOST=localhost
    DB_PORT=5432
    DB_DATABASE=chatapp
    PORT=3000
-
-   Start the backend server: node index.js
+    ```
+   Start the backend server: 
+   ```sh 
+   node index.js
+   ```
 
 3. **Frontend Setup:**
 
-   Navigate to the frontend directory: cd ../chatapp-frontend
-   Install dependencies: npm install
-   Start the frontend server: npm start
+   Navigate to the frontend directory: 
+   ```sh
+   cd ../chatapp-frontend
+   ```
+
+   Install dependencies:
+   ```sh
+    npm install
+    ```
+   Start the frontend server: 
+   ```sh
+   npm start
+    ```
 
 4. **Python Setup:**
 
-   Navigate to the project root directory: cd ../
-   Create a Python virtual environment: python -m venv llm_env
-
+   Navigate to the project root directory: 
+   ```sh
+   cd ../
+   Create a Python virtual environment: 
+   python -m venv llm_env
+    ```
    Activate the virtual environment
+    ```sh
    On Windows: llm_env\\Scripts\\activate
-
+    ```
+    ```sh
    On macOS/Linux: source llm_env/bin/activate
-
-   Install Python dependencies: pip install -r requirements.txt
+    ```
+   Install Python dependencies:
+   ```sh
+   pip install -r requirements.txt
+   ```
 
 ## Database Setup
 
 1. **Create a PostgreSQL database:**
+
    Open pgAdmin and create a new database named `chatapp`.
 
 2. **Create the required tables:**
+
    Run the following SQL queries to create the necessary tables:
 
+```sh
    CREATE TABLE documents (
    id SERIAL PRIMARY KEY,
    user_id INT,
@@ -86,17 +118,20 @@ This project is a chat application that leverages a Large Language Model (LLM) f
    message TEXT,
    response TEXT
    );
+```
 
 ## Usage
 
 1. **Upload a PDF:**
 
    Open the application in your browser at `http://localhost:3001`.
+
    Click on "Choose File" to select a PDF document and then click "Upload".
 
 2. **Ask a Question:**
 
    Enter your question in the chat input box and click "Send".
+
    The response will be displayed along with sentiment analysis and confidence score.
 
 ## Note
